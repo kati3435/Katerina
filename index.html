@@ -315,6 +315,22 @@ form.addEventListener('submit', async event => {
     }
     data.set('service', selected.name);
     data.set('price', selected.price);
+    data.set('_subject', 'Нова заявка — ' + selected.name + ' | Гледане на кафе с Катерина');
+    const customerName = document.querySelector('#customer-name').value.trim();
+    const customerEmail = document.querySelector('#customer-email').value.trim();
+    const customerMessage = document.querySelector('#customer-message').value.trim();
+    const photosCount = selected.needsPhoto ? Array.from(photoInput.files || []).length : 0;
+    // Един общ текст в допълнение към отделните полета: видим и в таблото, и в стандартното имейл известие.
+    data.set('order_summary', [
+      'НОВА ЗАЯВКА ЗА ГЛЕДАНЕ',
+      'Услуга: ' + selected.name,
+      'Цена: ' + selected.price,
+      'Име: ' + customerName,
+      'Имейл на клиента: ' + customerEmail,
+      'Въпрос / съобщение: ' + (customerMessage || '(не е посочен)'),
+      'Брой прикачени снимки: ' + photosCount,
+      'Снимките са налични като защитени връзки в FormSubmit.app.'
+    ].join('\n'));
     const response = await fetch(form.action, {
       method: 'POST',
       headers: { 'Accept': 'application/json' },
