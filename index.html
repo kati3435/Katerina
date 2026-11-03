@@ -3,6 +3,19 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+  // Remove only the ChatGPT referral parameter from the browser address bar.
+  // Preserve other parameters and the current section anchor.
+  (() => {
+    try {
+      const address = new URL(window.location.href);
+      if (address.searchParams.get('utm_source') === 'chatgpt.com') {
+        address.searchParams.delete('utm_source');
+        window.history.replaceState(window.history.state, '', address.pathname + address.search + address.hash);
+      }
+    } catch (_) { /* Does not affect opening or using the website. */ }
+  })();
+  </script>
   <meta name="theme-color" content="#fff8f1">
   <meta name="description" content="Кафе и Таро с Катерина – гледане на кафе по снимки и индивидуални тълкувания с карти Таро по имейл.">
   <title>Кафе и Таро с Катерина | Гледане на кафе и Таро онлайн</title>
