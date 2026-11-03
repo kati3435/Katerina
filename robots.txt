@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://katerina-kafe-taro.vercel.app/sitemap.xml
