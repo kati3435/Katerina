@@ -1,0 +1,4 @@
+# Netlify serves the existing static website directly from the repository root.
+# No build command or paid services are required.
+[build]
+  publish = "."
