@@ -111,6 +111,44 @@
 @media(max-width:700px){.social-grid{grid-template-columns:1fr;gap:12px}.social-card{min-height:113px;padding:17px 18px}.social-platform-icon{width:54px;height:54px;flex-basis:54px}.social-platform-icon svg{width:36px;height:36px}}
 @media(max-width:365px){.social-card{gap:11px;padding:14px}.social-card-copy strong{font-size:18px}.social-card-copy>span:not(.social-status){font-size:12px}}
 
+
+/* Безплатно интерактивно Таро – три карти */
+.tarot-draw-section{scroll-margin-top:90px}
+.tarot-draw-shell{max-width:980px;margin:0 auto;padding:28px 27px 24px;border:1px solid #e6cdb9;border-radius:25px;text-align:center;background:radial-gradient(circle at 50% 0%,#fffcf3,#fff3e7 55%,#f7e5e5);box-shadow:0 7px 25px rgba(83,34,50,.1)}
+.tarot-draw-kicker{font-size:11px;color:#916630;letter-spacing:.18em;font-weight:700;margin:0 0 14px}
+.tarot-pick-grid{display:grid;grid-template-columns:repeat(3,minmax(0,163px));justify-content:center;gap:clamp(11px,3vw,29px);margin:8px auto 16px}
+.tarot-pick-card{aspect-ratio:2/3;display:block;min-width:0;padding:8px;border:2px solid #dfbe86;border-radius:16px;background:linear-gradient(140deg,#86435a,#4b2537 58%,#713347);color:#f9dca7;box-shadow:0 8px 18px rgba(78,29,45,.21);transition:transform .2s,box-shadow .2s,opacity .2s;overflow:hidden}
+.tarot-pick-card:not(:disabled):hover{transform:translateY(-6px);box-shadow:0 14px 24px rgba(78,29,45,.24)}
+.tarot-pick-card:focus-visible{outline:3px solid #b98736;outline-offset:4px}
+.tarot-pick-card[aria-pressed="true"]{background:linear-gradient(145deg,#fffdf9,#fae9d4);color:#78394c;border-color:#c89855;transform:translateY(-4px)}
+.tarot-pick-card:disabled:not([aria-pressed="true"]){opacity:.5;cursor:default}
+.tarot-pick-back,.tarot-pick-front{position:relative;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:10px;width:100%;height:100%;border:1px solid currentColor;border-radius:9px}
+.tarot-pick-back:before{content:"";position:absolute;inset:6px;border:1px solid currentColor;border-radius:5px;opacity:.66}
+.tarot-pick-corner{position:absolute;top:14px;left:15px;font:19px Georgia,serif}
+.tarot-pick-emblem{font:clamp(50px,8vw,72px)/1 Georgia,serif;text-shadow:0 1px 9px #ffdfb633}
+.tarot-pick-stars{font-size:15px;letter-spacing:.15em}
+.tarot-pick-sign{font-size:11px;letter-spacing:.3em;font-weight:700}
+.tarot-pick-front{border-color:#c9a26f;padding:9px}
+.tarot-front-number{position:absolute;top:15px;font-size:12px;color:#987049}
+.tarot-front-icon{font-size:clamp(42px,6vw,66px)}
+.tarot-front-name{font:700 clamp(19px,2.5vw,27px)/1.07 "Caveat","Trebuchet MS",cursive}
+.tarot-draw-hint{font-size:13px;color:#7e5d58;margin:0 0 16px}
+.tarot-draw-result{max-width:675px;margin:15px auto 20px;padding:21px 24px;border:1px solid #e6cfb5;border-radius:18px;background:#fffdf9;box-shadow:0 4px 15px #683b2a0b}
+.tarot-result-overline{font-size:11px;color:#926630;letter-spacing:.15em;font-weight:700;margin:0 0 7px}
+.tarot-draw-result h3{font:700 clamp(32px,4vw,43px)/1.05 "Caveat","Trebuchet MS",cursive;color:#79394b;margin:0 0 6px}
+.tarot-result-keyword{font-size:13px;color:#976f3c;font-weight:700;margin:0 0 11px}
+.tarot-draw-result p:not(.tarot-result-overline):not(.tarot-result-keyword){font-size:14px;color:#5d444a;line-height:1.65;margin:8px 0}
+.tarot-result-reflection{font-style:italic}
+.tarot-draw-actions{display:flex;gap:12px 20px;align-items:center;justify-content:center;flex-wrap:wrap}
+.tarot-draw-again{min-height:44px;border:1px solid #79384b;background:#803849;color:white;padding:11px 21px;border-radius:25px;font-size:13px;font-weight:700}
+.tarot-draw-again:hover{background:#632839}
+.tarot-draw-personal{font-size:13px;font-weight:700;color:#783748;text-underline-offset:3px}
+.tarot-draw-disclaimer{max-width:670px;margin:18px auto 0;font-size:11px;line-height:1.55;color:#826b64}
+.tarot-pick-back[hidden],.tarot-pick-front[hidden],.tarot-draw-result[hidden]{display:none!important}
+@media(min-width:821px) and (max-width:1040px){.site-header .nav{gap:9px}.site-header .nav a{font-size:12px}.site-header .brand span{font-size:24px}.site-header .brand-icon{width:45px;height:45px}}
+@media(max-width:530px){.tarot-draw-shell{padding:18px 11px 19px;border-radius:19px}.tarot-pick-grid{grid-template-columns:repeat(3,minmax(0,115px));gap:9px}.tarot-pick-card{padding:5px;border-radius:11px}.tarot-pick-back,.tarot-pick-front{gap:4px;border-radius:7px}.tarot-pick-back:before{inset:4px}.tarot-pick-corner{top:8px;left:9px;font-size:13px}.tarot-pick-emblem{font-size:41px}.tarot-pick-stars{font-size:10px}.tarot-pick-sign{font-size:9px}.tarot-front-icon{font-size:41px}.tarot-front-name{font-size:19px}.tarot-draw-result{padding:17px 14px}}
+@media(prefers-reduced-motion:reduce){.tarot-pick-card{transition:none}}
+
 </style>
 <style>
 /* Контактна информация, добавена към секцията със социални канали */
@@ -148,7 +186,7 @@
       </a>
       <button class="mobile-toggle" type="button" aria-label="Отвори менюто" aria-expanded="false" aria-controls="main-nav"><svg><use href="#i-menu"/></svg></button>
       <nav class="nav" id="main-nav" aria-label="Основно меню">
-        <a href="#nachalo">Начало</a><a href="#uslugi">Услуги</a><a href="#sanovnik">🌙 Съновник</a><a href="#kak-raboti">Как работи</a><a href="#plashtane">Плащане</a><a href="#poruchai">Поръчай</a><a href="#vuprosi">Въпроси</a>
+        <a href="#nachalo">Начало</a><a href="#uslugi">Услуги</a><a href="#sanovnik">🌙 Съновник</a><a href="#izberi-karta">🔮 Карта</a><a href="#kak-raboti">Как работи</a><a href="#plashtane">Плащане</a><a href="#poruchai">Поръчай</a><a href="#vuprosi">Въпроси</a>
       </nav>
     </div>
   </header>
@@ -178,6 +216,32 @@
         <article class="service-card"><div class="service-icon"><svg><use href="#i-cards"/></svg></div><h3>Един въпрос<br>с Таро</h3><p>Отговор на един конкретен въпрос чрез картите Таро.</p><strong class="price">10 €</strong><button type="button" class="btn btn-small choose-service" data-service="tarot-question">Избери тази услуга</button></article>
         <article class="service-card"><div class="service-icon"><svg><use href="#i-heart"/></svg></div><h3>Любовно<br>Таро</h3><p>Консултация по тема, свързана с любов, чувства и взаимоотношения.</p><strong class="price">20 €</strong><button type="button" class="btn btn-small choose-service" data-service="tarot-love">Избери тази услуга</button></article>
         <article class="service-card"><div class="service-icon duo"><svg><use href="#i-cup"/></svg><svg><use href="#i-cards"/></svg></div><h3>Кафе и Таро<br><small>(комбинирано гледане)</small></h3><p>Пълно гледане на кафе и Таро тълкуване по един въпрос.</p><strong class="price">33 €</strong><button type="button" class="btn btn-small choose-service" data-service="coffee-tarot">Избери тази услуга</button></article>
+      </div>
+    </section>
+
+    <section class="section tarot-draw-section wrap" id="izberi-karta" aria-labelledby="tarot-draw-title">
+      <h2 class="section-title" id="tarot-draw-title"><span>✦</span> Избери карта Таро <span>✦</span></h2>
+      <p class="section-lede">Помисли за нещо, което те вълнува, и избери една от три обърнати карти. Разкрий своето символично послание.</p>
+      <div class="tarot-draw-shell">
+        <p class="tarot-draw-kicker">✧ БЕЗПЛАТНО ТЪЛКУВАНЕ ✧</p>
+        <div class="tarot-pick-grid" aria-label="Три карти Таро – избери една">
+          <button class="tarot-pick-card" type="button" data-tarot-pick="0" aria-pressed="false" aria-label="Избери първата карта"><span class="tarot-pick-back" aria-hidden="true"><span class="tarot-pick-corner">✧</span><span class="tarot-pick-emblem">☾</span><span class="tarot-pick-stars">✦ ✧ ✦</span><span class="tarot-pick-sign">ТАРО</span></span><span class="tarot-pick-front" hidden aria-hidden="true"><span class="tarot-front-number"></span><span class="tarot-front-icon"></span><span class="tarot-front-name"></span></span></button>
+          <button class="tarot-pick-card" type="button" data-tarot-pick="1" aria-pressed="false" aria-label="Избери втората карта"><span class="tarot-pick-back" aria-hidden="true"><span class="tarot-pick-corner">✧</span><span class="tarot-pick-emblem">✦</span><span class="tarot-pick-stars">✦ ✧ ✦</span><span class="tarot-pick-sign">ТАРО</span></span><span class="tarot-pick-front" hidden aria-hidden="true"><span class="tarot-front-number"></span><span class="tarot-front-icon"></span><span class="tarot-front-name"></span></span></button>
+          <button class="tarot-pick-card" type="button" data-tarot-pick="2" aria-pressed="false" aria-label="Избери третата карта"><span class="tarot-pick-back" aria-hidden="true"><span class="tarot-pick-corner">✧</span><span class="tarot-pick-emblem">☼</span><span class="tarot-pick-stars">✦ ✧ ✦</span><span class="tarot-pick-sign">ТАРО</span></span><span class="tarot-pick-front" hidden aria-hidden="true"><span class="tarot-front-number"></span><span class="tarot-front-icon"></span><span class="tarot-front-name"></span></span></button>
+        </div>
+        <p class="tarot-draw-hint" id="tarot-draw-hint">Докосни една карта, за да разкриеш нейното значение ✨</p>
+        <div class="tarot-draw-result" id="tarot-draw-result" hidden aria-live="polite">
+          <p class="tarot-result-overline">✦ Твоето послание ✦</p>
+          <h3 id="tarot-result-title" tabindex="-1"></h3>
+          <p class="tarot-result-keyword" id="tarot-result-keyword"></p>
+          <p id="tarot-result-meaning"></p>
+          <p class="tarot-result-reflection" id="tarot-result-reflection"></p>
+        </div>
+        <div class="tarot-draw-actions">
+          <button class="tarot-draw-again" type="button" id="tarot-redraw">↻ Разбъркай картите</button>
+          <a class="tarot-draw-personal" href="#poruchai">Лично Таро тълкуване →</a>
+        </div>
+        <p class="tarot-draw-disclaimer">Тълкуванията са символични, за забавление и личен размисъл. Не са сигурна прогноза за бъдещето или професионален съвет. Изборът е случаен.</p>
       </div>
     </section>
 
@@ -373,7 +437,7 @@
 
     <section class="legal-notes wrap" id="uslovia"><details><summary>Условия за заявка и информация за поверителност</summary><p><strong>Контакт:</strong> Катерина — <a href="mailto:magkaterina@abv.bg">magkaterina@abv.bg</a>. При заявка се събират име, имейл, избрана услуга, съобщение и снимки на чашата, ако ги прикачите. Данните се използват за отговор на запитването и за организиране на заявената услуга. Предоставят се на външния доставчик на формата <a href="https://formsubmit.app/" target="_blank" rel="noopener noreferrer">FormSubmit.app</a>, който обработва и съхранява изпратената информация според настройките на акаунта и собствените си условия. Формулярът сам по себе си не извършва плащане и не събира данни за банкови карти. Данните за банков превод се изпращат отделно по имейл след потвърждение. Цената и начинът на плащане се потвърждават по имейл. За достъп, корекция или изтриване на предоставени данни, както и за информация за срока на съхранение, пишете на посочения имейл. <a href="https://formsubmit.app/legal/dpa" target="_blank" rel="noopener noreferrer">Информация за обработването на данните от FormSubmit.app</a>.</p></details></section>
   </main>
-  <footer class="footer"><div class="wrap footer-inner"><a class="brand" href="#nachalo"><svg class="brand-icon"><use href="#i-cup"/></svg><span>Кафе и Таро<br><em>с Катерина</em></span></a><div class="footer-links"><p>✉ &nbsp; Имейл за връзка: <a href="mailto:magkaterina@abv.bg">magkaterina@abv.bg</a></p><a href="#sanovnik">Съновник</a><span> | </span><a href="/sanovnik.html">Значение на сънищата</a><span> | </span><a href="#uslovia">Условия за поръчка</a><span> | </span><a href="#uslovia">Поверителност</a><span> | </span><a href="#social">Facebook и YouTube</a></div><span class="footer-heart">♡</span></div><p class="disclaimer wrap">* Цените са посочени в услугите. Начинът на плащане и срокът се уточняват при потвърждение на заявката. Услугите не заместват медицински, психологически, правен или финансов съвет.</p></footer>
+  <footer class="footer"><div class="wrap footer-inner"><a class="brand" href="#nachalo"><svg class="brand-icon"><use href="#i-cup"/></svg><span>Кафе и Таро<br><em>с Катерина</em></span></a><div class="footer-links"><p>✉ &nbsp; Имейл за връзка: <a href="mailto:magkaterina@abv.bg">magkaterina@abv.bg</a></p><a href="#sanovnik">Съновник</a><span> | </span><a href="#izberi-karta">Избери карта Таро</a><span> | </span><a href="/sanovnik.html">Значение на сънищата</a><span> | </span><a href="#uslovia">Условия за поръчка</a><span> | </span><a href="#uslovia">Поверителност</a><span> | </span><a href="#social">Facebook и YouTube</a></div><span class="footer-heart">♡</span></div><p class="disclaimer wrap">* Цените са посочени в услугите. Начинът на плащане и срокът се уточняват при потвърждение на заявката. Услугите не заместват медицински, психологически, правен или финансов съвет.</p></footer>
   <script>
 'use strict';
 // Заявките се изпращат до FormSubmit.app чрез HTTPS. Плащания не се обработват на сайта.
@@ -645,6 +709,54 @@ dreamClear.addEventListener('click', () => {
   dreamSearch.focus();
 });
 renderDreamEntries();
+
+
+/* Избор на една от 22 символични карти Таро – без плащане и без изпращане на данни. */
+const tarotDeck = [["0","Шутът","✧","Ново начало","Пред теб има възможност да опиташ нещо ново с повече любопитство и лекота.","Коя малка първа крачка искаш да направиш?"],["I","Магьосникът","✦","Умения и действие","Разполагаш с повече възможности, отколкото може би забелязваш. Използвай талантите си съзнателно.","Кое твое умение можеш да приложиш сега?"],["II","Върховната жрица","☽","Интуиция и тишина","Не всеки отговор идва бързо. Понякога е нужно спокойствие, за да разбереш какво наистина чувстваш.","Какво подсказва вътрешният ти глас?"],["III","Императрицата","❀","Грижа и творчество","Творчеството и грижата за себе си могат да дадат плод, ако им отделиш време.","Кое важно нещо искаш да отгледаш с внимание?"],["IV","Императорът","♛","Стабилност и ред","Ясните граници и добрият план могат да донесат увереност и спокойствие.","Къде имаш нужда от повече структура?"],["V","Йерофантът","✣","Знание и традиция","Опитът на другите и собствените ти ценности могат да ти помогнат да намериш посоката.","От кого можеш да потърсиш мъдър съвет?"],["VI","Влюбените","♡","Близост и избор","Тази карта напомня за честност, доверие и избори, съобразени с важните за теб неща.","Как можеш да бъдеш по-открита в отношенията си?"],["VII","Колесницата","✧","Посока и воля","Постоянството помага да продължиш напред, дори когато около теб има разсейване.","Коя цел заслужава вниманието ти?"],["VIII","Силата","♌","Смелост и доброта","Истинската сила невинаги е шумна. Тя може да се прояви като търпение и нежност към себе си.","Къде можеш да подходиш по-спокойно?"],["IX","Отшелникът","✦","Размисъл и мъдрост","Краткото отдръпване от шума може да ти помогне да чуеш собствените си мисли.","За какво ти е нужно повече време?"],["X","Колелото на съдбата","☼","Промяна и цикли","Обстоятелствата се променят. Гъвкавостта помага да посрещаш новите етапи.","Кое можеш да приемеш, вместо да контролираш?"],["XI","Справедливостта","⚖","Баланс и честност","Погледни фактите спокойно и бъди честна със себе си и другите.","Кое решение се нуждае от безпристрастен поглед?"],["XII","Обесеният","☾","Друга перспектива","Понякога отговорът идва, когато погледнеш проблема от различен ъгъл.","Какво ще се промени, ако смениш гледната точка?"],["XIII","Смъртта","❧","Край и обновление","Това е символ на промяна и приключване на етап, а не буквално предсказание. Старото може да освободи място за новото.","С какво си готова да се разделиш?"],["XIV","Умереността","⚗","Хармония и мярка","Малките крачки и умереността могат да върнат равновесието в ежедневието.","Къде можеш да забавиш темпото?"],["XV","Дяволът","◇","Навици и свобода","Картата символично насочва внимание към навици и привързаности, които може да те ограничават.","Кой навик искаш да промениш?"],["XVI","Кулата","⚡","Промяна на основите","Неочакваните обстоятелства понякога те канят да преосмислиш старите си представи.","Какво искаш да изградиш по-устойчиво?"],["XVII","Звездата","✶","Надежда и вдъхновение","Запази надеждата и се радвай на постепенния напредък. Малката светлина също показва посока.","Какво те вдъхновява днес?"],["XVIII","Луната","☾","Сънища и чувства","Не всичко е такова, каквото изглежда. Разграничи фактите от тревожните предположения.","Какво знаеш със сигурност?"],["XIX","Слънцето","☀","Радост и яснота","Забележи хубавите неща и успехите си, дори когато са малки.","Какво заслужава да отпразнуваш?"],["XX","Страшният съд","✺","Осъзнаване и развитие","Уроците от миналото могат да ти помогнат да започнеш нов етап по-осъзнато.","Какво научи за себе си напоследък?"],["XXI","Светът","✹","Завършеност и растеж","Оцени изминатия път и постигнатото. Завършеният етап може да отвори нов хоризонт.","За какво искаш да се поздравиш?"]];
+const tarotButtons = [...document.querySelectorAll('[data-tarot-pick]')];
+const tarotBox = document.getElementById('tarot-draw-result');
+const tarotTitle = document.getElementById('tarot-result-title');
+const tarotHint = document.getElementById('tarot-draw-hint');
+let tarotCurrent = [];
+let tarotChosen = false;
+function shuffleTarotDeck() {
+  const indices = tarotDeck.map((_,index) => index);
+  for(let i=indices.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[indices[i],indices[j]]=[indices[j],indices[i]];}
+  tarotCurrent = indices.slice(0,3).map(i=>tarotDeck[i]);
+  tarotChosen = false;
+  tarotButtons.forEach(button=>{
+    button.disabled=false;
+    button.setAttribute('aria-pressed','false');
+    button.querySelector('.tarot-pick-back').hidden=false;
+    button.querySelector('.tarot-pick-front').hidden=true;
+  });
+  tarotBox.hidden=true;
+  tarotHint.hidden=false;
+}
+tarotButtons.forEach((button,position)=>{
+  button.addEventListener('click',()=>{
+    if(tarotChosen)return;
+    tarotChosen=true;
+    const [number,title,symbol,keyword,meaning,reflection]=tarotCurrent[position];
+    button.setAttribute('aria-pressed','true');
+    button.querySelector('.tarot-pick-back').hidden=true;
+    const front=button.querySelector('.tarot-pick-front');
+    front.querySelector('.tarot-front-number').textContent=number;
+    front.querySelector('.tarot-front-icon').textContent=symbol;
+    front.querySelector('.tarot-front-name').textContent=title;
+    front.hidden=false;
+    tarotButtons.forEach(b=>{if(b!==button)b.disabled=true;});
+    tarotTitle.textContent=title;
+    document.getElementById('tarot-result-keyword').textContent=keyword;
+    document.getElementById('tarot-result-meaning').textContent=meaning;
+    document.getElementById('tarot-result-reflection').textContent=reflection;
+    tarotBox.hidden=false;
+    tarotHint.hidden=true;
+    tarotTitle.focus({preventScroll:true});
+  });
+});
+document.getElementById('tarot-redraw').addEventListener('click',()=>{shuffleTarotDeck();tarotButtons[0].focus();});
+shuffleTarotDeck();
 
 // Добави действителните адреси на твоята Facebook страница и YouTube канал тук.
 // Например: 'https://www.facebook.com/името-на-страницата'
